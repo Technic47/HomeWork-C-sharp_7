@@ -10,10 +10,7 @@ int[,] array = new int[m, n];
 
 for (int i = 0; i < m; i++)
 {
-    for (int j = 0; j < n; j++)
-    {
-        array[i, j] = new Random().Next(0, 100);
-    }
+    for (int j = 0; j < n; j++) array[i, j] = new Random().Next(0, 100);
 }
 
 Console.WriteLine("Enter M1 index: ");
@@ -21,18 +18,15 @@ int m1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Enter N1 index: ");
 int n1 = int.Parse(Console.ReadLine()!);
 
-/*void PrintArray(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
+        for (int j = 0; j < n; j++) Console.Write($"{array[i, j]} ");
         Console.WriteLine();
     }
 }
-*/
+
 
 
 void CheckArray(int[,] array, int m1, int n1)
@@ -46,15 +40,12 @@ void CheckArray(int[,] array, int m1, int n1)
     {
         for (int j = 0; j < n; j++)
         {
-            if (i == m1 - 1 && j == n1 - 1)
-            {
-                Console.WriteLine($"You number {array[i, j]}");
-            }
+            if (i == m1 - 1 && j == n1 - 1) Console.WriteLine($"You number {array[i, j]}");
         }
     }
 }
 
-//PrintArray(array);
+PrintArray(array);
 Console.WriteLine();
 CheckArray(array, m1, n1);
 

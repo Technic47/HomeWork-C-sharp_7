@@ -14,10 +14,7 @@ int[,] array = new int[m, n];
 double sum = 0;
 for (int i = 0; i < m; i++)
 {
-    for (int j = 0; j < n; j++)
-    {
-        array[i, j] = new Random().Next(0, 10);
-    }
+    for (int j = 0; j < n; j++) array[i, j] = new Random().Next(0, 10);
 }
 
 void PrintArray(int[,] array)

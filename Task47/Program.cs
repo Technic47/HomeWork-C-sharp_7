@@ -14,20 +14,14 @@ double[,] array = new double[m, n];
 
 for (int i = 0; i < m; i++)
 {
-    for (int j = 0; j < n; j++)
-    {
-        array[i, j] = new Random().NextDouble() * 2000 - 1000;
-    }
+    for (int j = 0; j < n; j++) array[i, j] = new Random().NextDouble() * 200 - 100;
 }
 
 void PrintArray(double[,] array)
 {
     for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
+        for (int j = 0; j < n; j++) Console.Write(string.Format("{0:0.##}  ", array[i, j]));
         Console.WriteLine();
     }
 }
